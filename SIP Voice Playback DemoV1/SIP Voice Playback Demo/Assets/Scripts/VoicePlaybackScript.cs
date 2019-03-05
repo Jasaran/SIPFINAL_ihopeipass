@@ -5,10 +5,16 @@ using UnityEngine;
 public class VoicePlaybackScript : MonoBehaviour {
 
    private AudioSource rAudio;
+    private string device;
+
+    public bool loopRecord;
+    public int recordTime;
 
 	void Start ()
     {
            rAudio = gameObject.GetComponent<AudioSource>();
+        device = Microphone.devices[0];
+        Debug.Log(device);
     }
 
     void Update()
@@ -16,13 +22,12 @@ public class VoicePlaybackScript : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.R))
         {
             Debug.Log("Recording");
-            rAudio.clip = Microphone.Start("Blue Snowball", true, 10, 44100);
+            rAudio.clip = Microphone.Start(device, loopRecord, recordTime, 44100);
         }
         if (Input.GetKeyDown(KeyCode.P))
         {
             rAudio.Play();
         }
-        foreach (string device in Microphone.devices)
-            Debug.Log(device);
+        
     }
 }
