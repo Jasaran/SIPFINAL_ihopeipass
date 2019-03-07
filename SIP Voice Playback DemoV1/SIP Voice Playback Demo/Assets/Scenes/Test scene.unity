@@ -187,6 +187,7 @@ GameObject:
   m_Component:
   - component: {fileID: 229113846}
   - component: {fileID: 229113845}
+  - component: {fileID: 229113847}
   m_Layer: 0
   m_Name: Voice Affecting Area
   m_TagString: Untagged
@@ -213,12 +214,23 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 229113844}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 29.27, y: 4.12, z: 67.34}
+  m_LocalPosition: {x: 28.985, y: 4.12, z: 64.098}
   m_LocalScale: {x: 4.99711, y: 4.997113, z: 4.997113}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &229113847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 229113844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7221a3dc932feb142a70d35c96efc40b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &792461555
 GameObject:
   m_ObjectHideFlags: 0
@@ -1066,14 +1078,14 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 5
-  MaxDistance: 150
+  MinDistance: 1
+  MaxDistance: 300
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0

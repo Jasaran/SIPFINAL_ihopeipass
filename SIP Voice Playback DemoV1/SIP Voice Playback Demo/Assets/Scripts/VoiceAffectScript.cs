@@ -4,19 +4,27 @@ using UnityEngine;
 
 public class VoiceAffectScript : MonoBehaviour
 {
+    private Component mycompComponent;
+
+    void start()
+    {
+        mycompComponent = GetComponent<VoicePlaybackScript>();
+    }
     void OnTriggerEnter(Collider other)
     {
         Debug.Log("Object Entered the trigger");
+       // mycompComponent.enabled = false;
     }
 
-    void OntriggerStay(Collider other)
+    void OnTriggerStay(Collider other)
     {
         Debug.Log("object is within the trigger");
     }
 
-    void OntriggerExit(Collider other)
+    void OnTriggerExit(Collider other)
     {
         Debug.Log("Object has exited the trigger");
+        //mycompComponent.enabled = true;
     }
 
 }

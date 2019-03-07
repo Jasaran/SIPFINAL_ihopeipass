@@ -10,7 +10,7 @@ public class VoicePlaybackScript : MonoBehaviour {
     public bool loopRecord;
     public int recordTime;
 
-	void Start ()
+    void Start ()
     {
            rAudio = gameObject.GetComponent<AudioSource>();
         device = Microphone.devices[0];
